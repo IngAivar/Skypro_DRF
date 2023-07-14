@@ -63,7 +63,7 @@ class CourseSerializer(serializers.ModelSerializer):
 
     Поле preview не является обязательным для заполнения.
 
-    Поле name проверяется на уникальность.
+    Поле name  проверяется на уникальность.
     """
     preview = serializers.PrimaryKeyRelatedField(
         queryset=CourseImage.get_all_course_images(),

@@ -10,7 +10,7 @@ from .models import CustomUser, Payment
 
 class PaymentSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для модели Payment.
+    Сериализатор  для модели Payment.
 
     Поля:
     - id: Целочисленный идентификатор платежа.

@@ -5,7 +5,7 @@ from .models import LessonImage, CourseImage, UserImage
 
 class LessonImageSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для модели LessonImage.
+    Сериализатор для  модели LessonImage.
 
     Поля:
     - id: Целочисленный идентификатор изображения урока.
