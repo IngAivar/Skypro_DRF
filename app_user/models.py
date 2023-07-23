@@ -5,7 +5,7 @@ from django.db import models
 
 from app_course.models import Course, Lesson
 from app_image.models import UserImage
-from app_user.managers import CustomUserManager
+from .managers import CustomUserManager
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -44,7 +44,7 @@ class CustomUser(AbstractUser):
 
 
 class Payment(models.Model):
-    """Модель, описывающая  платеж"""
+    """Модель, описывающая платеж"""
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='payments', verbose_name='Пользователь')
     payment_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата оплаты')
     paid_course = models.ForeignKey(Course, on_delete=models.SET_NULL, **NULLABLE, verbose_name='Оплаченный курс')
