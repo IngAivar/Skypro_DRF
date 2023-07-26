@@ -9,7 +9,7 @@ class PhoneValidator:
 
     def __call__(self, value):
         """
-        Проверяет на соответствие формат телефона '+7(9**)***-**-**'
+        Проверяет, соответствует ли номер телефона формату '+7(9**)***-**-**'
         """
         if not re.match(self.phone_regex, value):
             raise ValidationError(message=self.message)
