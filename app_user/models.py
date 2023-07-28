@@ -19,8 +19,8 @@ class CustomUser(AbstractUser):
 
     username = None
     email = models.EmailField(unique=True, verbose_name='Электронная почта')
-    avatar = models.ForeignKey(UserImage, on_delete=models.SET_DEFAULT, default=1, related_name='users',
-                               verbose_name='Аватар')
+    avatar = models.ForeignKey(UserImage, on_delete=models.SET_NULL, related_name='users',
+                               verbose_name='Аватар', **NULLABLE)
     phone = models.CharField(max_length=16, verbose_name='Телефон')
     city = models.CharField(max_length=100, verbose_name='Город')
 
